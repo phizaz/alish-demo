@@ -68,8 +68,10 @@ function wait(ms) {
 function initMic() {
     var listener
 
-    if ('webkitSpeechRecognition' in window) {
-        var speechRecognizer = new webkitSpeechRecognition();
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+
+    if (SpeechRecognition) {
+        var speechRecognizer = new SpeechRecognition();
         speechRecognizer.continuous = true;
         speechRecognizer.interimResults = true;
         speechRecognizer.lang = 'en-US';

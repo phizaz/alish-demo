@@ -1,6 +1,7 @@
 const state = {
     nameCandidate: null,
-    name: null
+    name: null,
+    mic: null
 }
 
 function greeting() {
@@ -8,12 +9,14 @@ function greeting() {
         .then(() => aliceSpeak(null, 'What is my name ?'))
 }
 
-function toggleMic(mic) {
+function toggleMic() {
     console.log('toggel mic')
     const obj = $('.mic .btn-mic')
     obj.toggleClass('active')
 
     if (obj.hasClass('active')) {
+        const mic = initMic()
+        state.mic = mic
         if (!state.nameCandidate) {
             startNaming(mic)
         } else {
@@ -21,10 +24,12 @@ function toggleMic(mic) {
         }
     } else {
         if (!state.nameCandidate) {
-            stopNaming(mic)
+            stopNaming(state.mic)
         } else {
-            stopConfirm(mic)
+            stopConfirm(state.mic)
         }
+
+        state.mic = null
     }
 }
 
@@ -120,8 +125,6 @@ function nextStep() {
 }
 
 function main() {
-    const mic = initMic()
-
     greeting()
-    $('.btn-mic').click(() => toggleMic(mic))
+    $('.btn-mic').click(() => toggleMic())
 }
