@@ -122,8 +122,6 @@ function nextStep() {
 function main() {
     const mic = initMic()
 
-    // greeting()
-    // $('.btn-mic').click(() => toggleMic(mic))
-
-    popup()
+    greeting()
+    $('.btn-mic').click(() => toggleMic(mic))
 }
