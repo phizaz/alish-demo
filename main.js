@@ -77,10 +77,10 @@ function initMic() {
         speechRecognizer.lang = 'en-US';
         speechRecognizer.start();
 
-        var finalTranscripts = '';
         var finalFast = '';
 
         speechRecognizer.onresult = (e) => {
+            var finalTranscripts = '';
             var interimTranscripts = '';
             for (var i = e.resultIndex; i < e.results.length; i++) {
                 var transcript = e.results[i][0].transcript;
