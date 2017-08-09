@@ -1,0 +1,28 @@
+.creature {
+    position: relative;
+    display: inline-block;
+    height: 33rem;
+    width: 35rem;
+    overflow: hidden;
+}
+
+.creature .creature-inner {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+.creature .creature-inner.pikachu  {
+    /* left: 5rem; */
+    margin-left: 5rem;
+}
+
+.creature .creature-inner.raichu  {
+    /* left: 3.3rem; */
+    margin-left: 3.3rem;
+}
+
+.creature img {
+    width: 20rem;
+}

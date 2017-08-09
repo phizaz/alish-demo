@@ -1,0 +1,35 @@
+.mic {
+    margin: 1rem;
+}
+
+.btn-mic {
+    font-size: 3.5rem;
+    border-radius: 4rem;
+    width: 7rem;
+    height: 7rem;
+
+    border: none;
+    background-color: rgba(52, 73, 94,1.0);
+    background-image: none;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    color: white;
+    outline: none;
+}
+
+.btn-mic:focus,
+.btn-mic.focus {
+    background-color: rgba(52, 73, 94,1.0);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    color: white;
+}
+
+.btn-mic:active:focus,
+.btn-mic.active:focus,
+.btn-mic:active.focus,
+.btn-mic.active.focus,
+.btn-mic.active {
+    background-color: rgba(231, 76, 60,1.0);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    color: white
+}

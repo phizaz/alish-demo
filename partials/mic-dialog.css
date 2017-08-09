@@ -1,0 +1,15 @@
+.mic-dialog {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.mic-dialog .dialog {
+    width: 100%;
+    text-align: center;
+}
+
+.mic-dialog .dialog .popover {
+    position: relative;
+    display: inline-block;
+}

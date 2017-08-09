@@ -1,0 +1,40 @@
+.meter {
+    margin: 0rem 1rem;;
+}
+
+.meter .progress {
+    margin-bottom: 0.75rem;
+    height: 1.2rem;
+}
+
+.meter h2 {
+    font-weight: bold;
+    color: rgba(44, 62, 80,1.0);
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.meter small {
+    font-weight: bold;
+}
+
+.meter label {
+    font-size: 1.4rem;
+    color: rgba(52, 73, 94,1.0);
+}
+
+.meter .td-left{
+    padding: 1rem 1rem 1rem 0rem;
+}
+
+.meter .td-right{
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.meter table {
+    border: none;
+    margin-bottom: 0;
+}
+
+.meter table tr td {
+    border: none;
+}

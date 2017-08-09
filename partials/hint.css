@@ -1,0 +1,35 @@
+.hint {
+    margin: 1rem;
+    text-align: center;
+}
+
+.hint .tooltip {
+    margin-top: -1rem;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: auto;
+}
+
+.hint button {
+    border: none;
+    background-color: #e74c3c;
+    background-image: none;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hint .tooltip .tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    border-width: 1rem 1rem 0;
+    margin-left: -1rem;
+}
+
+.hint .tooltip .tooltip-inner {
+    border-radius: 8px;
+    line-height: 3rem;
+    padding: 1rem 2rem;
+    max-width: 400px;
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -25,10 +25,25 @@
 
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
 
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="main.js"></script>
 
-    <title>Popup</title>
+
+    <title>Alish</title>
 
     <style>
+        body::after {
+            content: "";
+            background: url('img/background.jpg');
+            opacity: 0.3;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
         .start {
             font-family: 'Fugaz One', cursive;
             text-align: center;
@@ -40,12 +55,16 @@
         }
 
         .start h1 {
-            font-size: 4.5rem;
+            font-size: 5.5rem;
+            vertical-align: middle;
+            color: rgba(231, 76, 60,1.0);
         }
 
         .start p {
             margin: 4rem 5rem;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            color: rgba(44, 62, 80,1.0);
+            text-shadow: 0px 0px 1rem rgba(255,255,255,0.5);
         }
 
         .start img {
@@ -53,12 +72,13 @@
             padding: 0 0.7rem;
         }
 
-        .start button {
+        .start .btn {
             border: none;
-            background-color: #f39c12;
+            background-color: rgba(231, 76, 60,1.0);
             background-image: none;
             font-weight: bold;
             font-size: 2.5rem;
+            padding: 1rem 2.5rem;
         }
     </style>
 </head>
@@ -70,14 +90,20 @@
             <h1><img src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/94/baby_1f476.png"> Alish</h1>
             <p>Go ahead and get better English already !</p>
             <p>
-                <button type="button" class="btn btn-primary">
+                <a href="scene_1.html" class="btn btn-primary">
                     Start Now !
                     <br> <small>It's almost free</small>
-                </button>
+                </a>
             </p>
         </div>
 
     </div>
+
+    <script>
+        speak("Welcome to 'Alish'")
+            .then(() => speak("Go ahead and get better English already!"))
+            .then(() => speak("Start Now! It's almost free!"))
+    </script>
 
 
 </body>

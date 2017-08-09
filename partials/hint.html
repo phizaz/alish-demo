@@ -23,59 +23,26 @@
     <!--fontawesome  -->
     <script src="https://use.fontawesome.com/bc801bca45.js"></script>
 
+    <link rel="stylesheet" href="hint.css">
 
-    <title>Creature</title>
-
-    <style>
-        .creature {
-            position: relative;
-            display: inline-block;
-            height: 35rem;
-            width: 35rem;
-        }
-
-        .creature .creature-inner {
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            bottom: 0;
-        }
-
-        .creature.pikachu .creature-inner {
-            left: 5rem;
-        }
-
-        .creature.raichu .creature-inner {
-            left: 3.3rem;
-        }
-
-        .creature img {
-            width: 20rem;
-        }
-    </style>
+    <title>Hint</title>
 </head>
 
 <body>
 
-    <table>
-        <tr>
-            <td>
-                <div class="creature pikachu">
-                    <div class="creature-inner">
-                        <img class="pikachu" src="../img/pikachu.gif">
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="creature raichu">
-                    <div class="creature-inner">
-                        <img class="raichu" src="../img/raichu.gif">
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
+    <div style="height: 10rem"></div>
 
+    <div class="hint">
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title='You can speak "Your name is Alice."'>
+            <strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Need help ? </strong>
+        </button>
+    </div>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 </body>
 
 </html>

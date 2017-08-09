@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!--fontawesome  -->
+    <script src="https://use.fontawesome.com/bc801bca45.js"></script>
+
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="main.js"></script>
+    <script src="scene_1.js"></script>
+
+    <link rel="stylesheet" href="partials/creature.css">
+    <link rel="stylesheet" href="partials/dialog.css">
+    <link rel="stylesheet" href="partials/creature-dialog.css">
+
+    <link rel="stylesheet" href="partials/hint.css">
+    <link rel="stylesheet" href="partials/mic.css">
+    <link rel="stylesheet" href="partials/mic-dialog.css">
+
+    <link rel="stylesheet" href="partials/popup.css">
+
+    <title>Creature</title>
+
+    <style>
+        body::after {
+            content: "";
+            background: url('img/background.jpg');
+            opacity: 0.6;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .bottom-console {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 2rem 2rem 3rem 2rem;
+            border-top: 1px solid rgba(189, 195, 199, 0.35);
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.3);
+        }
+
+        .dialog {
+            opacity: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="popup">
+        <div class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div> -->
+                    <div class="modal-body">
+                        <h1 class="task-text">
+                            <small>You just finished</small>
+                            <br>Name Your Alice !</h1>
+                        <h2 class="compliment-text">
+                            Great Work !<br>
+                            <small>Score 10 / 10</small></h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+    </div>
+
+    <div class="wrapper">
+        <div class="creature-dialog">
+
+            <div class="dialog" id="alice-dialog-wrapper">
+                <div class="popover top">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <h4 id="alice-dialog"><i>Alice:</i> I'm about to evolve!</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creature">
+                <div class="creature-inner pikachu">
+                    <img src="img/pikachu.gif">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottom-console">
+
+            <div class="hint">
+                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title='You can speak "Your name is Alice."'>
+                    <strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Need help ? </strong>
+                </button>
+            </div>
+
+            <div style="height: 1rem"></div>
+
+            <div class="mic-dialog">
+                <div class="mic">
+                    <button class="btn-mic btn btn-default" type="submit">
+                        <i class="fa fa-microphone" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="dialog" id="my-dialog-wrapper">
+                    <div class="popover bottom">
+                        <div class="arrow"></div>
+                        <div class="popover-content">
+                            <h4 id="my-dialog">Your name is Alice.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+
+            main()
+        })
+    </script>
+
+
+</body>
+
+</html>

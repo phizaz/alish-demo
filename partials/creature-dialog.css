@@ -1,0 +1,17 @@
+.creature-dialog {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.creature-dialog .dialog {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    text-align: center
+}
+
+.creature-dialog .dialog .popover {
+    position: relative;
+    display: inline-block;
+}

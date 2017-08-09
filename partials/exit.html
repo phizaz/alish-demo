@@ -23,47 +23,17 @@
     <!--fontawesome  -->
     <script src="https://use.fontawesome.com/bc801bca45.js"></script>
 
+    <link rel="stylesheet" href="exit.css">
 
-    <title>Hint</title>
-
-    <style>
-        .hint {
-            margin: 2rem;
-        }
-
-        .hint .tooltip {
-            margin-left: 1rem;
-            font-size: 1.8rem;
-            padding: 0 1rem;
-            width: auto;
-        }
-
-        .hint .tooltip .tooltip-arrow {
-            border-width: 1rem 1rem 1rem 0rem;
-            margin-top: -1rem;
-        }
-
-        .hint .tooltip .tooltip-inner {
-            border-radius: 8px;
-            line-height: 3rem;
-            padding: 1rem 2rem;
-            max-width: 400px;
-        }
-    </style>
+    <title>Creature</title>
 </head>
 
 <body>
-    <div class="hint">
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title='You can speak "Your name is Alice."'>
-            <strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Need help ? </strong>
-        </button>
+
+    <div>
+        <button type="button" class="btn exit btn-primary btn-lg">Quit</button>
     </div>
 
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
 </body>
 
 </html>
